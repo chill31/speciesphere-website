@@ -57,3 +57,18 @@ const secondSection = document.querySelector(".section-dos_donts");
 readMoreBtn.addEventListener("click", () => {
   scroll(header.offsetHeight + firstSection.offsetHeight + secondSection.offsetHeight);
 });
+
+const allSpeciesDiv = document.querySelectorAll(".species");
+const speciesDivObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+
+    if(entry.isIntersecting) {
+      entry.target.classList.add("done");
+    }
+
+  });
+}, {
+  threshold: 1
+});
+
+allSpeciesDiv.forEach((speciesDiv) => speciesDivObserver.observe(speciesDiv));
