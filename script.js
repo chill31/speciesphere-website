@@ -68,7 +68,7 @@ const speciesDivObserver = new IntersectionObserver((entries) => {
 
   });
 }, {
-  threshold: 1
+  threshold: .25
 });
 
 allSpeciesDiv.forEach((speciesDiv) => speciesDivObserver.observe(speciesDiv));

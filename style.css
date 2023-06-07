@@ -28,6 +28,11 @@ body {
   width: 100%;
 }
 
+::selection {
+  background-color: var(--dark-400);
+  color: white;
+}
+
 h1,
 h2,
 h3,
@@ -102,6 +107,11 @@ a:focus {
   bottom: 4rem;
   cursor: pointer;
   color: var(--dark-700);
+}
+
+.arrow:focus {
+  outline: double 2px;
+  outline-color: white;
 }
 
 .bounce {
@@ -362,9 +372,9 @@ a:focus {
   transform: scale(.95);
   opacity: 0;
   transition:
-    transform var(--dur) calc(var(--dur) * 5) ease-out,
-    opacity var(--dur) calc(var(--dur) * 5) ease-out,
-    filter var(--dur) calc(var(--dur) * 6) ease-out;
+    transform var(--dur) calc(var(--dur) * 4) ease-out,
+    opacity var(--dur) calc(var(--dur) * 4) ease-out,
+    filter var(--dur) calc(var(--dur) * 5) ease-out;
 }
 
 .done .species-image {
@@ -431,6 +441,12 @@ a:focus {
     margin-top: 2rem;
   }
 
+}
+
+/* extinct section styles */
+
+.section-extinct .section-title::after {
+  width: calc(100% - 30rem);
 }
 
 /* temporary */
