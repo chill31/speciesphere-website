@@ -449,6 +449,14 @@ a:focus {
   width: calc(100% - 30rem);
 }
 
+.extinct-species-image {
+  filter: grayscale(0);
+}
+
+.done .extinct-species-image {
+  filter: grayscale(1);
+}
+
 /* temporary */
 
 .unf::after, .unf::before {
