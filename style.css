@@ -27,6 +27,8 @@ body {
 
   min-height: 700px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 ::selection {
@@ -147,33 +149,27 @@ a:focus {
   height: fit-content;
   min-height: 700px;
   width: 100%;
-  padding-left: 4rem;
   padding-top: 4rem;
-  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 1000px) {
+  
+  .section {
+    width: 1000px;
+    align-self: center !important;
+  }
+  
 }
 
 .section-title {
   font-size: 4rem;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   gap: 1ch;
   position: relative;
-}
-
-.section-title::before {
-  content: "";
-  width: 2rem;
-  height: 1px;
-  background-color: var(--dark-700);
-  position: absolute;
-  left: -3rem;
-}
-
-.section-title::after {
-  content: "";
-  height: 1px;
-  background-color: var(--dark-700);
 }
 
 .section-subtitle {
@@ -185,6 +181,13 @@ a:focus {
   font-size: 1.1rem;
   width: 50rem;
   max-width: 90vw;
+  text-align: center;
+  align-self: center;
+}
+
+.para-brief {
+  align-self: flex-start !important;
+  text-align: left;
 }
 
 @media (max-width: 850px) {
@@ -212,6 +215,7 @@ a:focus {
   border-radius: .1rem;
   position: relative;
   transition: background-color 300ms ease;
+  width: fit-content;
 }
 
 .section-btn:where(:hover, :focus, :active) {
@@ -242,6 +246,15 @@ a:focus {
   max-width: 90vw;
   margin-left: 1rem;
   font-size: 1.1rem;
+}
+
+.list li::marker {
+  content: "\F3CD" !important;
+  color: var(--accent)
+}
+
+.list-donts li::marker {
+  color: red;
 }
 
 @media (max-width: 850px) {
@@ -279,17 +292,16 @@ a:focus {
   align-items: flex-start;
   width: 100%;
   --dur: 300ms;
-  padding-bottom: 3rem;
+  padding-bottom: 4rem;
   border-bottom: solid 1px rgba(0, 0, 0, .3);
 }
 
 .species:nth-child(2n) {
   flex-flow: row-reverse;
-  text-align: right;
 }
 
 .species:nth-child(2n) .species-name {
-  align-self: flex-end;
+  align-self: flex-start;
 } 
 
 .species-info {
@@ -298,7 +310,7 @@ a:focus {
   gap: 1ch;
   align-items: flex-start;
   justify-content: flex-start;
-  max-width: 30rem;
+  max-width: 40rem;
 }
 
 .species-name {
@@ -331,10 +343,6 @@ a:focus {
   cursor: pointer;
   border-radius: .1rem;
   position: relative;
-}
-
-.species:nth-child(2n) .species-btn {
-  align-self: flex-end;
 }
 
 .species-btn:where(:hover, :focus, :active) {
