@@ -428,7 +428,7 @@ a:focus {
   transform: scale(1);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
 
   .species {
     flex-direction: column;
@@ -452,17 +452,6 @@ a:focus {
   }
 
 }
-
-/* quote styles */
-
-
-
-/* .quote::selection, .quote *::selection {
-  background-color: var(--accent);
-  color: black;
-} */
-
-/* extinct section styles */
 
 .section-extinct .section-title::after {
   width: calc(100% - 30rem);
