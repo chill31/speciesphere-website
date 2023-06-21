@@ -249,11 +249,12 @@ a:focus {
 }
 
 .list li::marker {
-  content: "\F3CD" !important;
-  color: var(--accent)
+  content: "\F26C" !important;
+  color: var(--accent);
 }
 
 .list-donts li::marker {
+  content: "\F628" !important;
   color: red;
 }
 
