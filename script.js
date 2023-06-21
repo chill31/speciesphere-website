@@ -14,7 +14,7 @@ const dark400 = style.getPropertyValue('--dark-400');
 const dark700 = style.getPropertyValue('--dark-700');
 
 const header = document.querySelector(".header");
-const firstGoDownButton = document.querySelector(".main-arrow");
+const firstGoDownButton = header.querySelector(".section-btn");
 
 firstGoDownButton.addEventListener("click", () => {
   scroll(header.offsetHeight);
