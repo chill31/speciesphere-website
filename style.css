@@ -64,6 +64,11 @@ a:focus {
   outline: none !important;
 }
 
+br {
+  margin-top: 1ch;
+  margin-bottom: 1ch;
+}
+
 /** website styles */
 
 .header {
@@ -184,17 +189,20 @@ a:focus {
   background-color: var(--dark-700);
 }
 
-/* first section styles */
+.section-why p, .section-why canvas, .section-why .section-btn.btn-skip_report {
+  margin-left: 2rem;
+}
 
-.section-why .section-title::after {
-  width: calc(100vw - 20rem);
+@media (max-width: 640px) {
+
+  .section-why p, .section-why canvas, .section-why .section-btn.btn-skip_report {
+    margin-left: .25em;
+    text-align: left !important;
+  }
+
 }
 
 /* second section styles */
-
-.section-dos_donts .section-title::after {
-  width: calc(100vw - 35rem);
-}
 
 .list {
   display: flex;
@@ -208,16 +216,7 @@ a:focus {
   max-width: 90vw;
   margin-left: 1rem;
   font-size: 1.1rem;
-}
 
-.list li::marker {
-  content: "\F26C" !important;
-  color: var(--accent);
-}
-
-.list-donts li::marker {
-  content: "\F628" !important;
-  color: red;
 }
 
 @media (max-width: 850px) {
@@ -230,23 +229,11 @@ a:focus {
 
 /* third section styles */
 
-.section-endangered .section-title::after {
-  width: calc(100vw - 40rem);
-}
-
 .species-list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 3rem;
-  align-items: center;
-  justify-content: center;
-  width: calc(100% - 3rem)
-}
-
-@media (max-width: 850px) {
-  .species-list {
-    width: calc(100% - 1rem);
-  }
+  grid-template-columns: auto;
+  place-items: center;
 }
 
 .species {
@@ -257,7 +244,7 @@ a:focus {
   width: 100%;
   --dur: 300ms;
   padding-bottom: 4rem;
-  border-bottom: solid 1px rgba(0, 0, 0, .3);
+  border-bottom: solid 2px rgba(0, 0, 0, .3);
 }
 
 .species:nth-child(2n) {
@@ -417,10 +404,6 @@ a:focus {
 
 }
 
-.section-extinct .section-title::after {
-  width: calc(100% - 30rem);
-}
-
 .extinct-species-image {
   filter: grayscale(0);
 }
@@ -478,4 +461,22 @@ a:focus {
   color: white;
   transform: translate(-50%);
   min-width: max-content;
+}
+
+@media (max-width: 640px) {
+
+  .header {
+    padding-left: 1rem;
+  }
+
+  .section {
+    padding-left: 0;
+    align-items: center;
+  }
+
+  .section * {
+    text-align: center;
+    margin-inline: .25rem;
+  }
+
 }
